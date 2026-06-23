@@ -79,7 +79,7 @@ export default function Nav() {
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/feed/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
