@@ -12,12 +12,12 @@ const projects = [
     featured: true,
   },
   {
-    title: "Spasora",
+    title: "Blenpop",
     category: "SaaS Platform",
     description:
-      "Appointment booking and business management SaaS for wellness and beauty professionals. Multi-tenant architecture with calendar integrations.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe", "Twilio"],
-    links: { live: "https://spasora.xyz", github: "#" },
+      "All-in-one CRM and invoicing tool for small businesses. Free, web-based, and self-hostable with a clean dashboard for managing clients, invoices, and payments.",
+    tech: ["Next.js", "TypeScript", "Prisma", "Stripe", "Clerk"],
+    links: { live: "#", github: "https://github.com/SouthpawC0der/Blenpop-Saas" },
     accent: "#607393",
     featured: true,
   },
