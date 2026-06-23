@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Fullstack developer specializing in building exceptional digital products with Node.js, React, and TypeScript.",
   icons: {
-    icon: "/icon.png",
+    icon: "/EAS.png",
   },
 };
 
