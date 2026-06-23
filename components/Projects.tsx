@@ -2,12 +2,12 @@ import AnimateIn from "./AnimateIn";
 
 const projects = [
   {
-    title: "Joinveet",
+    title: "Southie's Ja Foods",
     category: "Web App",
     description:
-      "A professional networking platform for developers and recruiters. Features real-time chat, job listings, and profile matching powered by a recommendation engine.",
-    tech: ["Next.js", "NestJS", "PostgreSQL", "Redis", "Socket.io"],
-    links: { live: "https://joinveet.com", github: "#" },
+      "Full-stack restaurant website for an authentic Jamaican catering and to-go food business in Charlotte, NC. Online ordering, catering booking, and a full menu showcase.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    links: { live: "https://www.southiesjafood.com", github: "#" },
     accent: "#e45447",
     featured: true,
   },
