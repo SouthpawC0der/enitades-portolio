@@ -79,7 +79,7 @@ export default function Nav() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/feed/"
+            href="https://www.linkedin.com/in/enitan-adesina-ba12698a/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
