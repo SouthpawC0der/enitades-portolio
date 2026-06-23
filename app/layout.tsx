@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" type="image/png" href="/EAS.png" />
         {/* Prevent dark mode flash */}
         <script
           dangerouslySetInnerHTML={{
