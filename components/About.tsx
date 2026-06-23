@@ -1,4 +1,4 @@
-import AnimateIn from "./AnimateIn";
+ import AnimateIn from "./AnimateIn";
 
 export default function About() {
   return (
@@ -86,17 +86,14 @@ export default function About() {
                 </div>
                 <h2 className="text-4xl font-bold mb-4">The human behind the code</h2>
                 <p className="text-lg leading-8" style={{ color: "var(--muted)" }}>
-                  I started loving software back my sophomore year in college when
-                  the first ever iPhone released. Since then I&apos;ve worked on SaaS
+                  I started loving software back in my sophomore year in college when
+                  the first ever iPhone released. Since then, I&apos;ve worked on SaaS
                   products, internal tools, mobile applications, and open-source
                   projects — always chasing knowledge and working with amazing people.
+                  When I&apos;m not coding (or Vibing), you&apos;ll find me at the
+                  basketball court or cooking something in the kitchen.
                 </p>
               </div>
-
-              <p className="leading-8" style={{ color: "var(--muted)" }}>
-                When I&apos;m not coding (or Vibing), you&apos;ll find me at the
-                basketball court or cooking something in the kitchen.
-              </p>
 
               {/* Values */}
               <div className="grid grid-cols-2 gap-3">

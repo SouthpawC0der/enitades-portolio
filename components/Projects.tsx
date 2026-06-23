@@ -22,6 +22,16 @@ const projects = [
     featured: true,
   },
   {
+    title: "Driftwood & Stone",
+    category: "Client Website",
+    description:
+      "Multi-page luxury estate management website for a private concierge firm in Los Angeles. Full-screen video hero, parallax scrolling, rotating taglines, and an elegant, editorial design.",
+    tech: ["Next.js", "Tailwind CSS v4", "TypeScript", "Vercel"],
+    links: { live: "https://driftwoodandstonehomes.com", github: "#" },
+    accent: "#8b7355",
+    featured: true,
+  },
+  {
     title: "Mazino Makeovers",
     category: "Web App",
     description:

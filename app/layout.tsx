@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Enitades — Software Developer",
   description:
     "Fullstack developer specializing in building exceptional digital products with Node.js, React, and TypeScript.",
+  icons: {
+    icon: "/EAS.png",
+  },
 };
 
 export default function RootLayout({
