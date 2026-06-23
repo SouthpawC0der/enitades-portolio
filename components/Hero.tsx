@@ -60,7 +60,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="animate-fade-in-up-delay-4 flex gap-10 pt-2">
               {[
-                { value: "3+", label: "Years exp" },
+                { value: "7+", label: "Years exp" },
                 { value: "20+", label: "Projects built" },
                 { value: "10+", label: "Technologies" },
               ].map((stat) => (
