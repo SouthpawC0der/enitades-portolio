@@ -20,7 +20,10 @@ export const metadata: Metadata = {
   description:
     "Fullstack developer specializing in building exceptional digital products with Node.js, React, and TypeScript.",
   icons: {
-    icon: "/EAS.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/EAS.png", type: "image/png" },
+    ],
   },
 };
 
@@ -32,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" href="/EAS.png" />
         {/* Prevent dark mode flash */}
         <script
