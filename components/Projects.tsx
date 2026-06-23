@@ -7,7 +7,7 @@ const projects = [
     description:
       "Full-stack restaurant website for an authentic Jamaican catering and to-go food business in Charlotte, NC. Online ordering, catering booking, and a full menu showcase.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-    links: { live: "https://www.southiesjafood.com", github: "#" },
+    links: { live: "https://www.southiesjafood.com", github: "https://github.com/SouthpawC0der/southiesjafood-webs" },
     accent: "#e45447",
     featured: true,
   },
