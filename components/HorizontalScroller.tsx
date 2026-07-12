@@ -21,7 +21,11 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
       }, null) ?? panels[0] ?? null
     }
 
+    const isDesktop = () => window.innerWidth >= 1024
+
     const onWheel = (e: WheelEvent) => {
+      if (!isDesktop()) return
+
       const panel = getVisiblePanel()
 
       // If scrolling vertically and panel still has room to scroll, let it
@@ -37,6 +41,7 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
 
     // Nav anchor clicks → scroll to the panel containing that section
     const onAnchorClick = (e: MouseEvent) => {
+      if (!isDesktop()) return
       const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[href^="#"]')
       if (!anchor) return
       const id = anchor.getAttribute('href')?.slice(1)

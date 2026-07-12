@@ -38,20 +38,53 @@ body {
   font-family: var(--font-sans);
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
 }
 
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+/* Mobile: normal vertical flow */
 .horizontal-scroller {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 100vh;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  display: block;
 }
 
-.horizontal-scroller::-webkit-scrollbar {
-  display: none;
+/* Desktop: horizontal panel layout */
+@media (min-width: 1024px) {
+  .horizontal-scroller {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100vh;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .horizontal-scroller::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mobile: panels are normal block elements */
+.h-panel {
+  width: 100%;
+  height: auto;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+/* Desktop: panels are full-viewport horizontal slots */
+@media (min-width: 1024px) {
+  .h-panel {
+    min-width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
 }
 
 /* Animations */
