@@ -47,7 +47,7 @@ const projects = [
     description:
       "Real-time hub for basketball players to find local pickup games and courts. No more empty courts — HoopScout connects you to live runs near you before they fill up.",
     tech: ["React Native", "Expo", "Firebase", "Maps"],
-    links: { live: "https://apps.apple.com/us/app/hoopscout-basketball/id6776443380", github: "#" },
+    links: { live: "https://apps.apple.com/us/app/hoopscout-basketball/id6776443380", github: "https://github.com/SouthpawC0der/HoopScout-Basketball" },
     accent: "#f97316",
     featured: false,
   },
