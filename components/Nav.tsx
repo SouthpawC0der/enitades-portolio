@@ -154,7 +154,7 @@ export default function Nav() {
 
           {/* Email CTA */}
           <a
-            href="mailto:hello@enitades.xyz"
+            href="mailto:hello@enitades.dev"
             className="btn-accent hidden sm:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
           >
             say hello
@@ -210,11 +210,11 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="mailto:hello@enitades.xyz"
+            href="mailto:hello@enitades.dev"
             className="text-sm font-medium"
             style={{ color: "#e45447" }}
           >
-            hello@enitades.xyz
+            hello@enitades.dev
           </a>
         </div>
       )}

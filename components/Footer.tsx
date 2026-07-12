@@ -98,11 +98,11 @@ export default function Footer() {
               Get in touch
             </div>
             <a
-              href="mailto:hello@enitades.xyz"
+              href="mailto:hello@enitades.dev"
               className="text-sm font-medium transition-colors hover:underline"
               style={{ color: "#e45447" }}
             >
-              hello@enitades.xyz
+              hello@enitades.dev
             </a>
             <p className="text-sm mt-2" style={{ color: "var(--muted)" }}>
               Charlotte, NC 🇺🇸

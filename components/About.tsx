@@ -123,7 +123,7 @@ export default function About() {
                 <a href="/resume.pdf" download="Enitan_Adesina_Resume.pdf" className="btn-outline px-5 py-2.5 rounded-full text-sm font-medium">
                   Download CV
                 </a>
-                <a href="mailto:hello@enitades.xyz" className="btn-accent px-5 py-2.5 rounded-full text-sm font-medium">
+                <a href="mailto:hello@enitades.dev" className="btn-accent px-5 py-2.5 rounded-full text-sm font-medium">
                   Get in touch
                 </a>
               </div>
