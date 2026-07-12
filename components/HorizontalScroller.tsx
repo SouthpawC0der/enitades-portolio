@@ -24,14 +24,18 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
     const isDesktop = () => window.innerWidth >= 1024
 
     let locked = false
+    let accumulator = 0
+    // How much scroll delta must build up before snapping to next section
+    const SNAP_THRESHOLD = 120
 
     const snapToPanel = (index: number) => {
       const panels = Array.from(el.querySelectorAll<HTMLElement>('[data-panel]'))
       const target = panels[Math.max(0, Math.min(panels.length - 1, index))]
       if (!target) return
       locked = true
+      accumulator = 0
       el.scrollTo({ left: target.offsetLeft, behavior: 'smooth' })
-      setTimeout(() => { locked = false }, 800)
+      setTimeout(() => { locked = false }, 900)
     }
 
     const getPanelIndex = (panel: HTMLElement) => {
@@ -44,17 +48,26 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
 
       const panel = getVisiblePanel()
 
-      // If scrolling vertically and panel still has room to scroll, let it
+      // If the panel still has vertical content to scroll through, let it scroll
       if (panel && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         const atTop = panel.scrollTop <= 0
         const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2
-        if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) return
+        if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) {
+          accumulator = 0
+          return
+        }
       }
 
+      // Panel is at its boundary — accumulate scroll intent before snapping
       e.preventDefault()
       if (locked || !panel) return
 
-      const direction = (e.deltaY || e.deltaX) > 0 ? 1 : -1
+      const delta = e.deltaY || e.deltaX
+      accumulator += delta
+
+      if (Math.abs(accumulator) < SNAP_THRESHOLD) return
+
+      const direction = accumulator > 0 ? 1 : -1
       snapToPanel(getPanelIndex(panel) + direction)
     }
 
