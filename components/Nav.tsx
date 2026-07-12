@@ -12,8 +12,14 @@ export default function Nav() {
   useEffect(() => {
     setIsDark(document.documentElement.classList.contains("dark"));
     const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleHorizontal = (e: Event) =>
+      setScrolled((e as CustomEvent).detail.scrollLeft > 20);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("horizontalscroll", handleHorizontal);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("horizontalscroll", handleHorizontal);
+    };
   }, []);
 
   const toggleTheme = () => {
