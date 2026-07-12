@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center pt-20 pb-16">
@@ -77,117 +79,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Code card visual */}
-          <div className="hidden lg:flex justify-end items-center">
-            <div className="animate-float relative w-full max-w-sm">
-              {/* Main code card */}
-              <div
-                className="rounded-2xl border border-[var(--card-border)] p-6 shadow-2xl"
-                style={{ backgroundColor: "var(--card-bg)" }}
-              >
-                {/* Fake window dots */}
-                <div className="flex gap-2 mb-5">
-                  <div
-                    className="w-3 h-3 rounded-full"
-                    style={{ backgroundColor: "#e45447" }}
-                  />
-                  <div
-                    className="w-3 h-3 rounded-full"
-                    style={{ backgroundColor: "#e29d51" }}
-                  />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                </div>
-
-                {/* Code snippet */}
-                <div
-                  className="font-mono text-[13px] leading-6"
-                  style={{ color: "var(--muted)" }}
-                >
-                  <div>
-                    <span style={{ color: "#607393" }}>const</span>{" "}
-                    <span style={{ color: "var(--foreground)" }}>
-                      engineer
-                    </span>{" "}
-                    <span style={{ color: "#607393" }}>=</span>{" "}
-                    <span>{"{"}</span>
-                  </div>
-                  <div className="pl-4">
-                    <span style={{ color: "var(--foreground)" }}>name</span>
-                    {": "}
-                    <span style={{ color: "#4ade80" }}>&quot;Enitades&quot;</span>
-                    {","}
-                  </div>
-                  <div className="pl-4">
-                    <span style={{ color: "var(--foreground)" }}>role</span>
-                    {": "}
-                    <span style={{ color: "#4ade80" }}>
-                      &quot;Software Developer&quot;
-                    </span>
-                    {","}
-                  </div>
-                  <div className="pl-4">
-                    <span style={{ color: "var(--foreground)" }}>stack</span>
-                    {": ["}
-                  </div>
-                  {[
-                    "Node.js",
-                    "React",
-                    "TypeScript",
-                    "PostgreSQL",
-                  ].map((tech) => (
-                    <div key={tech} className="pl-8">
-                      <span style={{ color: "#4ade80" }}>
-                        &quot;{tech}&quot;
-                      </span>
-                      {","}
-                    </div>
-                  ))}
-                  <div className="pl-4">{"],"}</div>
-                  <div className="pl-4">
-                    <span style={{ color: "var(--foreground)" }}>
-                      available
-                    </span>
-                    {": "}
-                    <span style={{ color: "#e29d51" }}>true</span>
-                  </div>
-                  <div>{"}"}</div>
-                </div>
-              </div>
-
-              {/* Floating badge: Open to work */}
-              <div
-                className="absolute -top-3 -right-3 px-3 py-1.5 text-white rounded-full text-xs font-medium shadow-lg"
-                style={{ backgroundColor: "#e45447" }}
-              >
-                Open to work ✦
-              </div>
-
-              {/* Floating badge: Stack */}
-              <div
-                className="absolute -bottom-4 -left-4 px-3 py-2 rounded-xl text-xs font-medium shadow-lg border border-[var(--card-border)]"
-                style={{ backgroundColor: "var(--card-bg)" }}
-              >
-                <div
-                  className="text-[10px] uppercase tracking-widest mb-1"
-                  style={{ color: "var(--muted)" }}
-                >
-                  current stack
-                </div>
-                <div className="flex gap-1">
-                  {["TS", "RQ", "NX", "PG"].map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-1.5 py-0.5 rounded text-[10px] font-bold"
-                      style={{
-                        backgroundColor: "var(--card-border)",
-                        color: "var(--foreground)",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+          {/* Right: Cartoon illustration */}
+          <div className="hidden lg:flex justify-center items-center">
+            <div className="animate-float relative">
+              <Image
+                src="/images/cartoon.png"
+                alt="Enitan cartoon illustration"
+                width={420}
+                height={420}
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
