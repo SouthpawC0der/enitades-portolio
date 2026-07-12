@@ -25,17 +25,44 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
 
     let locked = false
     let accumulator = 0
-    // How much scroll delta must build up before snapping to next section
-    const SNAP_THRESHOLD = 120
+    let rafId = 0
+    const SNAP_THRESHOLD = 300
+    const ANIM_DURATION = 850
+
+    const easeInOutCubic = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
 
     const snapToPanel = (index: number) => {
       const panels = Array.from(el.querySelectorAll<HTMLElement>('[data-panel]'))
       const target = panels[Math.max(0, Math.min(panels.length - 1, index))]
       if (!target) return
+
       locked = true
       accumulator = 0
-      el.scrollTo({ left: target.offsetLeft, behavior: 'smooth' })
-      setTimeout(() => { locked = false }, 900)
+      cancelAnimationFrame(rafId)
+
+      // Temporarily disable CSS snap so our animation drives the position
+      el.style.scrollSnapType = 'none'
+
+      const startLeft = el.scrollLeft
+      const endLeft = target.offsetLeft
+      const distance = endLeft - startLeft
+      const startTime = performance.now()
+
+      const animate = (now: number) => {
+        const elapsed = now - startTime
+        const progress = Math.min(elapsed / ANIM_DURATION, 1)
+        el.scrollLeft = startLeft + distance * easeInOutCubic(progress)
+
+        if (progress < 1) {
+          rafId = requestAnimationFrame(animate)
+        } else {
+          el.style.scrollSnapType = 'x mandatory'
+          locked = false
+        }
+      }
+
+      rafId = requestAnimationFrame(animate)
     }
 
     const getPanelIndex = (panel: HTMLElement) => {
