@@ -60,7 +60,7 @@ function SkillCard({
             className="h-full rounded-full"
             style={{
               width: inView ? `${level}%` : "0%",
-              backgroundColor: "#e45447",
+              backgroundColor: "#9DC183",
               transition: `width 900ms ease ${index * 80}ms`,
             }}
           />
@@ -81,10 +81,10 @@ export default function Skills() {
         <AnimateIn variant="fade-up">
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-3">
-              <div className="h-px w-8" style={{ backgroundColor: "#e45447" }} />
+              <div className="h-px w-8" style={{ backgroundColor: "#9DC183" }} />
               <span
                 className="text-xs font-medium tracking-widest uppercase"
-                style={{ color: "#e45447" }}
+                style={{ color: "#9DC183" }}
               >
                 expertise
               </span>
@@ -104,7 +104,7 @@ export default function Skills() {
               <div className="flex items-center gap-3 mb-6">
                 <div
                   className="w-8 h-8 rounded-lg flex items-center justify-center text-white"
-                  style={{ backgroundColor: "#e45447" }}
+                  style={{ backgroundColor: "#9DC183" }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />

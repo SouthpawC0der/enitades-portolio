@@ -59,7 +59,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="text-xl font-bold mb-2">
-              enitades<span style={{ color: "#e45447" }}>.</span>
+              enitades<span style={{ color: "#9DC183" }}>.</span>
             </div>
             <p className="text-sm leading-6" style={{ color: "var(--muted)" }}>
               Building digital products with care, precision, and a love for
@@ -100,7 +100,7 @@ export default function Footer() {
             <a
               href="mailto:hello@enitades.dev"
               className="text-sm font-medium transition-colors hover:underline"
-              style={{ color: "#e45447" }}
+              style={{ color: "#9DC183" }}
             >
               hello@enitades.dev
             </a>

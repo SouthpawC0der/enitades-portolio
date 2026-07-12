@@ -212,7 +212,7 @@ export default function Nav() {
           <a
             href="mailto:hello@enitades.dev"
             className="text-sm font-medium"
-            style={{ color: "#e45447" }}
+            style={{ color: "#9DC183" }}
           >
             hello@enitades.dev
           </a>

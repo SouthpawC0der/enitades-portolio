@@ -17,7 +17,7 @@ export default function About() {
                 className="px-5 py-3 flex items-center gap-2 border-b border-[var(--card-border)]"
                 style={{ backgroundColor: "var(--card-border)" }}
               >
-                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#e45447" }} />
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#9DC183" }} />
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#e29d51" }} />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
                 <span className="ml-2 text-xs font-mono" style={{ color: "var(--muted)" }}>
@@ -28,7 +28,7 @@ export default function About() {
               {/* Markdown content */}
               <div className="p-6 font-mono text-sm leading-7">
                 <div className="mb-4">
-                  <span style={{ color: "#e45447" }}># </span>
+                  <span style={{ color: "#9DC183" }}># </span>
                   <span className="font-bold text-base">What&apos;s Up? I&apos;m Enitan 👋</span>
                 </div>
 
@@ -65,7 +65,7 @@ export default function About() {
                 </div>
                 <p className="mt-2" style={{ color: "var(--muted)" }}>
                   🚀 Building in public & open to{" "}
-                  <span style={{ color: "#e45447" }}>full-time / contract</span> roles.
+                  <span style={{ color: "#9DC183" }}>full-time / contract</span> roles.
                 </p>
               </div>
             </div>
@@ -76,10 +76,10 @@ export default function About() {
             <div className="space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="h-px w-8" style={{ backgroundColor: "#e45447" }} />
+                  <div className="h-px w-8" style={{ backgroundColor: "#9DC183" }} />
                   <span
                     className="text-xs font-medium tracking-widest uppercase"
-                    style={{ color: "#e45447" }}
+                    style={{ color: "#9DC183" }}
                   >
                     about me
                   </span>

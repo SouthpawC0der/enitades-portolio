@@ -23,7 +23,7 @@ export default function Hero() {
               <h1 className="text-6xl md:text-7xl font-bold leading-[0.95] tracking-tight">
                 SOFTWARE
                 <br />
-                <span style={{ color: "#e45447" }}>DEVELOPER</span>
+                <span style={{ color: "#9DC183" }}>DEVELOPER</span>
               </h1>
             </div>
 

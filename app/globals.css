@@ -14,7 +14,7 @@
   --foreground: #2b2929;
   --card-bg: #ffffff;
   --card-border: #e5e0da;
-  --accent: #e45447;
+  --accent: #9DC183;
   --secondary: #607393;
   --gold: #e29d51;
   --muted: #8a8078;
@@ -160,14 +160,14 @@ body {
 
 /* Reusable button styles */
 .btn-accent {
-  background-color: #e45447;
+  background-color: #9DC183;
   color: white;
   transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 .btn-accent:hover {
-  background-color: #c73d31;
+  background-color: #7da863;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(228, 84, 71, 0.35);
+  box-shadow: 0 4px 12px rgba(157, 193, 131, 0.35);
 }
 
 .btn-outline {

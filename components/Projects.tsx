@@ -8,7 +8,7 @@ const projects = [
       "Full-stack restaurant website for an authentic Jamaican catering and to-go food business in Charlotte, NC. Online ordering, catering booking, and a full menu showcase.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     links: { live: "https://www.southiesjafood.com", github: "https://github.com/SouthpawC0der/southiesjafood-webs" },
-    accent: "#e45447",
+    accent: "#9DC183",
     featured: true,
   },
   {
@@ -110,10 +110,10 @@ export default function Projects() {
         {/* Section header */}
         <AnimateIn variant="fade-up" className="mb-14">
           <div className="flex items-center gap-3 mb-3">
-            <div className="h-px w-8" style={{ backgroundColor: "#e45447" }} />
+            <div className="h-px w-8" style={{ backgroundColor: "#9DC183" }} />
             <span
               className="text-xs font-medium tracking-widest uppercase"
-              style={{ color: "#e45447" }}
+              style={{ color: "#9DC183" }}
             >
               portfolio
             </span>
