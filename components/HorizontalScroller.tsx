@@ -23,6 +23,22 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
 
     const isDesktop = () => window.innerWidth >= 1024
 
+    let locked = false
+
+    const snapToPanel = (index: number) => {
+      const panels = Array.from(el.querySelectorAll<HTMLElement>('[data-panel]'))
+      const target = panels[Math.max(0, Math.min(panels.length - 1, index))]
+      if (!target) return
+      locked = true
+      el.scrollTo({ left: target.offsetLeft, behavior: 'smooth' })
+      setTimeout(() => { locked = false }, 800)
+    }
+
+    const getPanelIndex = (panel: HTMLElement) => {
+      const panels = Array.from(el.querySelectorAll<HTMLElement>('[data-panel]'))
+      return panels.indexOf(panel)
+    }
+
     const onWheel = (e: WheelEvent) => {
       if (!isDesktop()) return
 
@@ -36,7 +52,10 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
       }
 
       e.preventDefault()
-      el.scrollBy({ left: e.deltaY || e.deltaX, behavior: 'smooth' })
+      if (locked || !panel) return
+
+      const direction = (e.deltaY || e.deltaX) > 0 ? 1 : -1
+      snapToPanel(getPanelIndex(panel) + direction)
     }
 
     // Nav anchor clicks → scroll to the panel containing that section
@@ -50,7 +69,7 @@ export default function HorizontalScroller({ children }: { children: ReactNode }
       if (!section) return
       const panel = section.closest<HTMLElement>('[data-panel]') ?? section
       e.preventDefault()
-      el.scrollTo({ left: panel.offsetLeft, behavior: 'smooth' })
+      snapToPanel(getPanelIndex(panel as HTMLElement))
     }
 
     // Tell Nav how far we've scrolled horizontally
