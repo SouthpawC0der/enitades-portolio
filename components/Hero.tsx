@@ -38,7 +38,7 @@ export default function Hero() {
                 className="font-medium"
                 style={{ color: "var(--foreground)" }}
               >
-                JavaScript
+                Python and Swift
               </span>{" "}
               and the modern web stack.
             </p>
