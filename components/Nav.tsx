@@ -39,6 +39,7 @@ export default function Nav() {
     { href: "#projects", label: "projects" },
     { href: "#skills", label: "skills" },
     { href: "#about", label: "about" },
+    { href: "/how-it-works", label: "how it works", external: true },
   ];
 
   return (
@@ -62,6 +63,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               className="hover:text-[var(--foreground)] transition-colors hover:-translate-y-px duration-200"
+              style={link.label === "how it works" ? { color: "#9DC183" } : undefined}
             >
               {link.label}
             </a>
@@ -204,7 +206,8 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors font-medium py-1"
+              className="hover:text-[var(--foreground)] transition-colors font-medium py-1"
+              style={{ color: link.label === "how it works" ? "#9DC183" : "var(--muted)" }}
             >
               {link.label}
             </a>
