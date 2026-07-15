@@ -57,7 +57,7 @@ const projects = [
     description:
       "REST API that aggregates developer productivity metrics from GitHub, Jira, and Linear. Provides actionable insights for engineering teams.",
     tech: ["Node.js", "TypeScript", "PostgreSQL", "Fastify"],
-    links: { live: "#", github: "#" },
+    links: { live: "#", github: "https://github.com/SouthpawC0der/DevMetrics" },
     accent: "#a78bfa",
     featured: false,
   },
