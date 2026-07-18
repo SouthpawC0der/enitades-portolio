@@ -5,10 +5,12 @@ import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import HorizontalScroller from "@/components/HorizontalScroller";
+import WelcomeModal from "@/components/WelcomeModal";
 
 export default function Home() {
   return (
     <>
+      <WelcomeModal />
       <Nav />
       <HorizontalScroller>
         <div data-panel className="h-panel"><Hero /></div>
